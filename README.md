@@ -8,11 +8,11 @@ Make sure that you also downloaded the git submodules. You will also need cmake 
 
 # How to use?
 
-Connect a MIDI device (for example, your e-piano) to your Computer.
+Connect a MIDI device (for example, your e-piano) to your computer.
 
 Then, start the program:
 ```bash
-LD_LIBRARY_PATH="./rtaudio_build;./rtmidi_build/.libs" nice -n 0 ./a.out
+LD_LIBRARY_PATH="./rtaudio_build;./rtmidi_build/.libs" ./a.out
 ```
 
 If multiple MIDI devices are found, then you are prompted to select the correct one.

@@ -34,11 +34,11 @@ public:
 int playFromSource(void *outputBuffer, void *inputBuffer, unsigned int nBufferFrames, double streamTime, RtAudioStreamStatus status, void *userData)
 {
     double * buffer = (double *) outputBuffer;
-	AudioSource& source = *(AudioSource*)userData;
+    AudioSource& source = *(AudioSource*)userData;
 
-	if (status)
-	{
-		std::cerr << "Stream underflow detected!" << std::endl;
+    if (status)
+    {
+        std::cerr << "Stream underflow detected!" << std::endl;
     }
     
     return source.fillBuffer(buffer, nBufferFrames);
